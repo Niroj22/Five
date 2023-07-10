@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Token Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Token Page</h1>
+  <form id="tokenForm">
+    <label for="tokenInput">Enter your token:</label>
+    <input type="text" id="tokenInput" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('tokenForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the token value entered by the user
+      var token = document.getElementById('tokenInput').value;
+
+      // Perform any necessary background process with the token
+      // You can make an API request, store the token in local storage, or perform any other action here
+      
+      // Example: Display the token in an alert
+      alert('Token submitted: ' + token);
+      
+      // You can also redirect the user to another page or perform any other action as needed
+
+      // Clear the input field
+      document.getElementById('tokenInput').value = '';
+    });
+  </script>
+</body>
+</html>
